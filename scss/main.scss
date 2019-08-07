@@ -1,0 +1,171 @@
+.accordion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 786px;
+    margin-top: 50px;
+    font-family: "Open Sans", sans-serif, Arial, Helvetica;
+    font-size: 1.0rem;
+    font-weight: normal;
+
+    .heading {
+        display: block;
+        margin: 0 -5px;
+        width: 180px;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+        padding: 9px 0;
+        border-right: 2px solid black;
+        text-align: center;
+        outline: none;
+        transition: 0.4s;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif, Arial, Helvetica;
+        float: left;
+        text-decoration: none;
+
+        &:nth-child(odd) {
+            border: 2px solid black;
+            border-right: none;
+        }
+
+        &:nth-child(5) {
+            border-right: 2px solid black;
+        }
+
+        &.active {
+            color: white;
+            background-color: black;
+        }
+    }
+
+    .panel {
+        padding: 0 9px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        color: black;
+        font-family: "Open Sans", sans-serif, Arial, Helvetica;
+        font-weight: normal;
+        font-size: 0.81em;
+        position: absolute;
+        top: 50px;
+        z-index: 10;
+
+        &-open {
+            max-height: 100%;
+            overflow: visible;
+            transition: max-height 0.3s ease-out;
+        }
+
+        p {
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        .material-items {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 30px;
+
+            div {
+                padding: 0 20px;
+                font-size: 3.3em;
+                font-weight: 300;
+                font-family: "Open Sans", sans-serif, Arial, Helvetica;
+                text-align: center;
+            }
+
+            div span {
+                display: block;
+                width: 100%;
+                font-size: 0.4em;
+                font-family: "Open Sans", sans-serif, Arial, Helvetica;
+            }
+        }
+
+        .underline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                width: 48px;
+                margin: 25px 0 0 25px;
+                border-top: 1px solid black;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .accordion {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        font-family: "Open Sans", sans-serif, Arial, Helvetica;
+        font-size: 0.6rem;
+        font-weight: normal;
+
+        p {
+            margin-top: 0;
+        }
+
+        .heading {
+            float: none;
+            width: 100%;            
+            padding: 20px 0;
+            text-align: left;
+            
+            font-size: 1.8em;
+            font-family: "Open Sans", sans-serif, Arial, Helvetica;
+            font-weight: bold;
+
+            &:after {
+                content: "\002B";
+                color: #000;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+            &.active:after {
+                content: "\2212";
+            }
+
+            &.active {
+                color: black;
+                background-color: white;
+            }
+
+            &:nth-child(odd) {
+                border: none;
+                border-bottom: 2px solid black;
+            }
+
+            &:nth-last-child(2) {
+                border: none;
+            }
+        }
+
+        div.panel {
+            position: relative;
+            top: initial;
+            font-size: 1.77em;
+            padding: 0;
+
+            .material-items {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                margin-top: 0;
+            }
+        }
+
+        
+    }
+}
