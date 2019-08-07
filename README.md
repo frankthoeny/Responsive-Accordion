@@ -1,10 +1,7 @@
----
-permalink: /index.html
----
 
 [Code Test Demo](https://frankthoeny.github.io/sdg-code-test/)
 
-First off, get all dependencies up-and-running.
+First off clone and get all dependencies up-and-running.
 
 `$ npm install`
 
