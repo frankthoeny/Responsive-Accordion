@@ -1,0 +1,147 @@
+.accordion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 786px;
+  margin-top: 50px;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.accordion .heading {
+  display: block;
+  margin: 0 -5px;
+  width: 180px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  padding: 9px 0;
+  border-right: 2px solid black;
+  text-align: center;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  float: left;
+  text-decoration: none;
+}
+.accordion .heading:nth-child(odd) {
+  border: 2px solid black;
+  border-right: none;
+}
+.accordion .heading:nth-child(5) {
+  border-right: 2px solid black;
+}
+.accordion .heading.active {
+  color: white;
+  background-color: black;
+}
+.accordion .panel {
+  padding: 0 9px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  color: black;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-weight: normal;
+  font-size: 0.81em;
+  position: absolute;
+  top: 50px;
+  z-index: 10;
+}
+.accordion .panel-open {
+  max-height: 100%;
+  overflow: visible;
+  transition: max-height 0.3s ease-out;
+}
+.accordion .panel p {
+  padding-top: 12px;
+  text-align: center;
+}
+.accordion .panel .material-items {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.accordion .panel .material-items div {
+  padding: 0 20px;
+  font-size: 3.3em;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  text-align: center;
+}
+.accordion .panel .material-items div span {
+  display: block;
+  width: 100%;
+  font-size: 0.4em;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+}
+.accordion .panel .underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion .panel .underline div {
+  width: 48px;
+  margin: 25px 0 0 25px;
+  border-top: 1px solid black;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .accordion {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    font-family: "Open Sans", sans-serif, Arial, Helvetica;
+    font-size: 0.6rem;
+    font-weight: normal;
+  }
+  .accordion p {
+    margin-top: 0;
+  }
+  .accordion .heading {
+    float: none;
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    font-size: 1.8em;
+    font-family: "Open Sans", sans-serif, Arial, Helvetica;
+    font-weight: bold;
+  }
+  .accordion .heading:after {
+    content: "\002B";
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .accordion .heading.active:after {
+    content: "\2212";
+  }
+  .accordion .heading.active {
+    color: black;
+    background-color: white;
+  }
+  .accordion .heading:nth-child(odd) {
+    border: none;
+    border-bottom: 2px solid black;
+  }
+  .accordion .heading:nth-last-child(2) {
+    border: none;
+  }
+  .accordion div.panel {
+    position: relative;
+    top: initial;
+    font-size: 1.77em;
+    padding: 0;
+  }
+  .accordion div.panel .material-items {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
