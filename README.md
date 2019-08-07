@@ -1,5 +1,5 @@
 
-[Code Test Demo](https://frankthoeny.github.io/sdg-code-test/)
+[Code Test Demo](https://frankthoeny.github.io/Responsive-Accordion/)
 
 First off clone and get all dependencies up-and-running.
 
