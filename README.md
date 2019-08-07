@@ -1,18 +1,18 @@
 
 First off, get all dependencies up-and-running.
-$ npm install
+`$ npm install`
 
 Build the webpack bundle.
-$ npm run build
+`$ npm run build`
 
 Start the webpack dev server.
-$ npm start
+`$ npm start`
 
 In a separate terminal you can run these build tools.
 Watch & Compile Sass to Css (scss/main.scss file to the public/css/main.css file)
-$ npm run watch-css
+`$ npm run watch-css`
 
 Build Css
-$ npm run build-css
+`$ npm run build-css`
 
 
