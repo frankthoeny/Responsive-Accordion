@@ -1,3 +1,8 @@
+---
+permalink: /index.html
+---
+
+[Code Test Demo](https://frankthoeny.github.io/sdg-code-test/)
 
 First off, get all dependencies up-and-running.
 
